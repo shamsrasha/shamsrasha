@@ -190,6 +190,9 @@ var map = new mapboxgl.Map({
     zoom: 6.1,
     center: [38.997, 34.853],
     scrollZoom: false,
+    doubleclickZoom: false,
+    boxZoom: false,
+    dragPan: false,
 });
 
 
@@ -203,7 +206,7 @@ usa.features.forEach(function(_marker_usa) {
   // make a marker for each feature and add to the map
   new mapboxgl.Marker(el)
     .setLngLat(_marker_usa.geometry.coordinates)
-    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+    .setPopup(new mapboxgl.Popup({}) // add popups
     .setHTML('<h3>' + _marker_usa.properties.title + '</h3><p>' + _marker_usa.properties.description + '</p>'+ '<img>' + _marker_usa.properties.image + '</img>'))
     .addTo(map);
 });
@@ -221,7 +224,7 @@ iran.features.forEach(function(_marker_iran) {
   // make a marker for each feature and add to the map
   new mapboxgl.Marker(el)
     .setLngLat(_marker_iran.geometry.coordinates)
-    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+    .setPopup(new mapboxgl.Popup({}) // add popups
     .setHTML('<h3>' + _marker_iran.properties.title + '</h3><p>' + _marker_iran.properties.description + '</p>'+ '<img>' + _marker_iran.properties.image + '</img>'))
     .addTo(map);
 });
@@ -236,7 +239,7 @@ russia.features.forEach(function(_marker_russia) {
   // make a marker for each feature and add to the map
   new mapboxgl.Marker(el)
     .setLngLat(_marker_russia.geometry.coordinates)
-    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+    .setPopup(new mapboxgl.Popup({}) // add popups
     .setHTML('<h3>' + _marker_russia.properties.title + '</h3><p>' + _marker_russia.properties.description + '</p>'+ '<img>' + _marker_russia.properties.image + '</img>'))
     .addTo(map);
 });
