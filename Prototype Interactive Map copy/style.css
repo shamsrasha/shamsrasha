@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#map {
+  width: 100%;
+  height: 900px;
+  margin: auto;
+  position: absolute;
+}
+.mapboxgl-popup {
+  width: 800px;
+}
+
+.mapboxgl-popup-content {
+  text-align: justify;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  width: 800px;
+  overflow-y: scroll;
+}
+.marker_usa {
+  background-image: url('png/united-states-of-america-flag-xl.png');
+  background-size: cover;
+  width: 33px;
+  height: 20px;
+  cursor: pointer;
+}
+.marker_iran {
+  background-image: url('png/iran-flag-icon-256.png');
+  background-size: cover;
+  width: 35px;
+  height: 20px;
+  cursor: pointer;
+}
+.marker_russia {
+  background-image: url('png/russia-flag-wave-icon-256.png');
+  background-size: cover;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
